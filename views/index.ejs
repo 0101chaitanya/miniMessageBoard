@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body class="flex flex-col  items-center">
+  <%- include("./partials/nav.ejs") %>
+  <div class=" fixed top-16 flex flex-col justify-center content-center p-4">
+    <% messages.forEach((message)=>{ %>
+    <figure class="border-4 p-4 w-96 m-2">
+      <blockquote><%= message.text %></blockquote>
+      <figcaption>- <%= message.user %> <%=  message.added%></figcaption>
+    </figure>
+    <%}) %>
+  </div>
+</body>
+
+</html>

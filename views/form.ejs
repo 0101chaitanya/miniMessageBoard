@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body class="flex flex-col  items-center">
+  <%- include("./partials/nav.ejs") %>
+  <form class=" my-8 fixed top-16 flex flex-col  border-4 justify-center divide-y gap-y-4 items-center p-4" action=" /new" method="POST">
+    <label>Text:
+      <input required class="border-4 w-96" type="text" name="text" />
+    </label>
+    <label>User:
+      <input required type="text" class="w-96 border-4" name="user" />
+    </label>
+    <label>Added:
+      <input required type="datetime-local" class="w-50 border-4" name="added" />
+    </label>
+    <button type="submit" class="border-8 border-blue-500 m-2 p-2">Submit</button>
+  </form>
+</body>
+
+</html>
